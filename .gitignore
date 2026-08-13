@@ -1,0 +1,297 @@
+# ============================================================
+# HDFC Custom LLM Development Pipeline
+# Root Git Ignore
+# ============================================================
+
+
+# ============================================================
+# ENVIRONMENT / SECRETS
+# ============================================================
+
+.env
+.env.*
+!.env.example
+
+*.pem
+*.key
+*.crt
+*.cer
+*.p12
+*.pfx
+
+secrets/
+credentials/
+.local/
+.local.env
+
+
+# ============================================================
+# PYTHON
+# ============================================================
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+*.so
+
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+.pyre/
+.ruff_cache/
+
+
+# ============================================================
+# VIRTUAL ENVIRONMENTS
+# ============================================================
+
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+
+# ============================================================
+# NODE / NEXT.JS
+# ============================================================
+
+node_modules/
+.next/
+out/
+dist/
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+.npm/
+.yarn/
+.pnpm-store/
+
+*.tsbuildinfo
+
+
+# ============================================================
+# IDE / EDITORS
+# ============================================================
+
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+.idea/
+*.iml
+
+*.swp
+*.swo
+*~
+
+
+# ============================================================
+# OS FILES
+# ============================================================
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+
+# ============================================================
+# DATABASE / LOCAL DATABASE FILES
+# ============================================================
+
+*.db
+*.sqlite
+*.sqlite3
+
+postgres-data/
+postgresql-data/
+
+
+# ============================================================
+# LOCAL STORAGE / UPLOADS
+# ============================================================
+
+uploads/
+upload/
+storage/
+
+# Local MinIO data
+minio-data/
+minio_storage/
+data/minio/
+
+
+# ============================================================
+# DATASETS
+# ============================================================
+
+# Do not commit raw banking datasets
+datasets/raw/
+datasets/unrefined/
+datasets/private/
+datasets/confidential/
+
+# Local prepared datasets / generated data
+datasets/prepared/
+datasets/processed/
+datasets/output/
+
+# Dataset files accidentally placed in project
+*.csv
+*.xlsx
+*.xls
+*.parquet
+*.jsonl
+
+# Allow explicitly committed sample/test datasets
+!datasets/sample/
+!datasets/sample/**/*.csv
+!datasets/sample/**/*.xlsx
+!datasets/sample/**/*.jsonl
+!datasets/sample/**/*.parquet
+
+
+# ============================================================
+# ML / LLM ARTIFACTS
+# ============================================================
+
+models/
+model/
+checkpoints/
+checkpoint/
+adapters/
+lora/
+qlora/
+
+artifacts/
+prepared_artifacts/
+evaluation_artifacts/
+
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# Hugging Face cache
+.huggingface/
+.cache/huggingface/
+
+# General ML caches
+.mlflow/
+mlruns/
+wandb/
+
+
+# ============================================================
+# LOGS
+# ============================================================
+
+logs/
+*.log
+*.log.*
+log/
+
+# Application generated logs
+services/**/logs/
+apps/**/logs/
+
+
+# ============================================================
+# TEMPORARY / GENERATED FILES
+# ============================================================
+
+tmp/
+temp/
+.tmp/
+.cache/
+*.tmp
+*.temp
+
+*.bak
+*.backup
+
+
+# ============================================================
+# DOCKER
+# ============================================================
+
+docker-compose.override.yml
+
+# Docker local volumes
+.docker/
+docker-data/
+
+
+# ============================================================
+# TEST OUTPUT
+# ============================================================
+
+test-results/
+coverage/
+playwright-report/
+blob-report/
+
+.pytest_cache/
+
+
+# ============================================================
+# GENERATED API / DOCUMENTATION FILES
+# ============================================================
+
+openapi.json
+swagger.json
+
+
+# ============================================================
+# SYSTEM / TOOL GENERATED FILES
+# ============================================================
+
+.DS_Store
+Thumbs.db
+*.orig
+
+
+# ============================================================
+# LOCAL DEVELOPMENT FILES
+# ============================================================
+
+*.local
+*.local.json
+
+scratch/
+notes-local/

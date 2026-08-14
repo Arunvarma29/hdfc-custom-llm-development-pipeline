@@ -1,0 +1,14 @@
+{
+  "name": "distilgpt2",
+  "provider": "huggingface",
+  "architecture": "causal-lm",
+  "context_length": 1024,
+  "license": "approved-for-mvp",
+  "provenance": "approved-source",
+  "security_assessment": "PASS",
+  "approved_use_scope": [
+    "banking-assistance",
+    "internal-model-development"
+  ],
+  "status": "APPROVED"
+}

@@ -17,6 +17,10 @@ class Settings(BaseSettings):
     minio_bucket: str
     minio_secure: bool = False
 
+    jwt_secret_key: str
+    jwt_algorithm: str = "HS256"
+    jwt_expire_minutes: int = 60
+
     model_config = SettingsConfigDict(
         env_file= DATABASE_DIR /".env",
         case_sensitive=False,

@@ -1,4 +1,5 @@
 import axios from "axios";
+import { getAuthToken } from "./auth.storage";
 
 const api = axios.create({
   baseURL: "http://127.0.0.1:8001",
@@ -6,5 +7,20 @@ const api = axios.create({
     "Content-Type": "application/json",
   },
 });
+
+api.interceptors.request.use(
+  (config) => {
+    const token = getAuthToken();
+
+    if (token) {
+      config.headers = config.headers || {};
+      config.headers.Authorization =
+        `Bearer ${token}`;
+    }
+
+    return config;
+  },
+  (error) => Promise.reject(error)
+);
 
 export default api;

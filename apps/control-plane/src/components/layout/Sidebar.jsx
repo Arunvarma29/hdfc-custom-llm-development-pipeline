@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FaTimes } from "react-icons/fa";
 import { sidebarItems } from "@/constants/sidebar";
+import LogoutButton from "@/components/auth/LogoutButton";
 
 export default function Sidebar({ isOpen, onClose }) {
   const pathname = usePathname();
@@ -68,9 +69,7 @@ export default function Sidebar({ isOpen, onClose }) {
               >
                 <Icon size={18} />
 
-                <span className="text-sm font-medium">
-                  {item.title}
-                </span>
+                <span className="text-sm font-medium">{item.title}</span>
               </Link>
             );
           })}
@@ -79,13 +78,11 @@ export default function Sidebar({ isOpen, onClose }) {
         {/* Footer */}
         <div className="shrink-0 border-t border-slate-800 p-4">
           <div className="rounded-lg bg-slate-800 p-3">
-            <p className="text-sm font-semibold">
-              Admin
-            </p>
-
-            <p className="text-xs text-slate-400">
-              AI Platform
-            </p>
+            <p className="text-sm font-semibold">Admin</p>
+            <div className="mt-3 rounded-lg bg-slate-800">
+              <LogoutButton />
+            </div>
+            <p className="text-xs text-slate-400">AI Platform</p>
           </div>
         </div>
       </aside>

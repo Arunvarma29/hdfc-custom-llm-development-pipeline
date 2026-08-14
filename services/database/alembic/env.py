@@ -19,6 +19,8 @@ from services.data_preparation.app.models.preparation_quality_report import (
     PreparationQualityReport,
 )  # noqa: F401
 
+from services.dataset_registry.app.models.user import User
+
 
 
 

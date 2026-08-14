@@ -1,0 +1,9 @@
+{
+  "models": [
+    {
+      "name": "distilgpt2",
+      "config": "configs/base-models/banking-base-model.json",
+      "status": "APPROVED"
+    }
+  ]
+}
